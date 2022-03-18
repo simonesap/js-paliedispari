@@ -1,6 +1,3 @@
-// Palidroma
-// Chiedere all’utente di inserire una parola
-// Creare una funzione per capire se la parola inserita è palindroma
 // Pari e Dispari
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
@@ -10,3 +7,20 @@
 // Consigli del giorno
 // 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
 // 2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
+
+let bottonePari = document.getElementById('pari');
+let bottoneDispari = document.getElementById('dispari');
+
+bottonePari.addEventListener('click',
+    function() {
+        let numeroUtentePari = Number(prompt('Inserisci un numero da 1 a 5'));
+        console.log(numeroUtentePari);
+}   
+)
+
+bottoneDispari.addEventListener('click',
+    function() {
+        let numeroUtenteDispari = Number(prompt('Inserisci un numero da 1 a 5'));
+        console.log(numeroUtenteDispari);
+    }
+)
