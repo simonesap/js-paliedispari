@@ -22,9 +22,17 @@ function inversioneStringa(str) {
 }
 
 document.getElementById('box').innerHTML = `<div>Ok amico, questa è la parola da te inserita ma al contrario... Ti sembra palindroma? <span style="font-size:40px;color:red;background-color:blue;">${inversioneStringa(parolaInserita)}</span></div>`;
-siNo=prompt('Si o No?')
 
-while (siNo=String('si')) {
-    document.getElementById('box').innerHTML = `<div>Esatto amico! la parola <span style="font-size:40px;color:red;background-color:blue;">${inversioneStringa(parolaInserita)}</span> è palindroma.</div>`
-} document.getElementById('box').innerHTML = `<div>Mi dispiace amico, devi studiare un po di più perchè la parola  <span style="font-size:40px;color:red;background-color:blue;">${inversioneStringa(parolaInserita)}</span> non è affatto palindroma.</div>`
+
+siNo=prompt('Si o No?')
+if(siNo===String('si')) {
+    document.getElementById('box2').innerHTML = `<div>Esatto amico! la parola <span style="font-size:40px;color:red;background-color:blue;">${inversioneStringa(parolaInserita)}</span> è palindroma.</div>`;
+} else {
+    document.getElementById('box').innerHTML += `<div>Esatto amico, la parola  <span style="font-size:40px;color:red;background-color:blue;">${inversioneStringa(parolaInserita)}</span> non è affatto palindroma.</div>`;
+}
+
+
+
+
+
 
