@@ -33,6 +33,9 @@ bottoneDispari.addEventListener('click',
     }
 )
 
+document.getElementById('utente').innerHTML = `<div>L'utente ha scelto il numero: ${arrayPari}</div>`;
+document.getElementById('utente').innerHTML = `<div>L'utente ha scelto il numero: ${arrayDispari}</div>`;
+
 let numero = Math.floor(Math.random() * 5);
 
 // Genero il numero random del computer
@@ -41,24 +44,19 @@ function numRandom(numero) {
     return x;
 }
 
-document.getElementById('computer').innerHTML += `<div> ${numRandom(numero)} </div>`;
+document.getElementById('computer').innerHTML += `<div>Il computer ha scelto il numero: ${numRandom(numero)} </div>`;
 
-// if(numeroUtentePari == 'pari'){
-//     console.log(numeroUtentePari);
-// } else {
-//     console.log(numeroUtenteDispari)
-// }
+let somma = arrayPari + arrayDispari;
 
+function pariDispari () {
+        if (numero % 2 == 0) {
+            return 'pari';
+        } else {
+            return 'dispari';
+        }
+}
 
-
-
-// function pariDispari () {
-//         if (numero % 2 == 0) {
-//             return 'pari';
-//         } else {
-//             return 'dispari';
-//         }
-//     }
+document.getElementById('vincitore').innerHTML = `${pariDispari(somma)}`;
  
     
 
